@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Khodam</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #282828;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #444;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        input {
+            padding: 12px;
+            width: calc(100% - 24px);
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e6b800;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #00ff00;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cek Khodam Anda</h2>
+        <input type="text" id="name" placeholder="Masukkan Nama Anda">
+        <button onclick="cekKhodam()">Cek Khodam</button>
+        <div id="result"></div>
+        <footer>Hanya untuk hiburan, hasil tidak ilmiah :)</footer>
+    </div>
+
+    <script>
+        function cekKhodam() {
+            var name = document.getElementById('name').value;
+
+            if(name) {
+                // Daftar khodam acak
+                var khodamList = [
+                    "Khodam Skibidi Toilet",
+                    "Khodam Sigma",
+                    "Khodam Pomni",
+                    "Khodam Rian Batagor",
+                    "Khodam Kai Cenat",
+                    "Khodam Keripik Kaca",
+                    "Khodam SupaNega",
+                    "Khodam Jin Iklik",
+                    "Khodam Kosong",
+                    "Khodam Rizz God",
+                    "Khodam Adolf Hitler",
+                    "Khodam Ujang Sucipto",
+                    "Khodam Prabowo",
+                    "Khodam Alan Walker",
+                    "Khodam Mas Rusdi";
+                    "Khodam Si Imut",
+                    "Khodam Mas Faiz",
+                    "Khodam Kominfo",
+                    "Khodam Saitama",
+                    "Khodam Curut",
+                    "Khodam Elmanuk",
+                    "Khodam Antony",
+                    "Khodam El Gasing",
+                ];
+
+                // Memilih khodam secara acak
+                var randomKhodam = khodamList[Math.floor(Math.random() * khodamList.length)];
+                document.getElementById('result').innerHTML = "Khodam Anda adalah: " + randomKhodam;
+            } else {
+                document.getElementById('result').innerHTML = "Mohon masukkan nama Anda!";
+            }
+        }
+    </script>
+
+</body>
+</html>
